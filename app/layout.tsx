@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-gradient-to-r from-cyan-500 to-blue-500">
+      <header className="text-gray-600 body-font bg-white">
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <img width="64" height="64" src="https://img.icons8.com/nolan/64/blog.png" alt="blog"/>
+          <span className="ml-3 text-xl">BlogIt</span>
+        </Link>
+        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <Link href="/" className="mr-5 hover:text-gray-900 text-xl">Home</Link>
+          <Link href="/blog" className="mr-5 hover:text-gray-900 text-xl">Blogs</Link>
+          <Link href="/about" className="mr-5 hover:text-gray-900 text-xl">About</Link>
+          <Link href="/contact" className="mr-5 hover:text-gray-900 text-xl">Contact</Link>
+        </nav>
+        <div className="p-2 ">
+          <Link href="/login">
+            <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
+          </Link>
+        </div>
+        {/* <div className="p-2 ">
+          <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
+        </div> */}
+      </div>
+    </header>
+      {children}
+      </body>
     </html>
   );
 }
