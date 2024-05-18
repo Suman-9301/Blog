@@ -28,12 +28,12 @@ export default async function Blog() {
                                 <div className="p-4 md:w-1/3" key={item.id}>
                         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-white">
                         <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={"http://localhost:1337"+ item.attributes.img.data.attributes.url} alt="blog"/>
-                        <Link href={"/singleblog/"+ item.id }>
+                        <Link href={"/singleblog?id="+item.id}>
                         <div className="p-6">
                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{item.attributes.title}</h1>
                             <p className="leading-relaxed mb-3">{item.attributes.desc}</p>
                             <div className="flex items-center flex-wrap ">
-                            <Link href={"/singleblog/"+ item.id } className="text-indigo-600 inline-flex items-center md:mb-2 lg:mb-0">Read More
+                            <Link href={"/singleblog?id="+item.id} className="text-indigo-600 inline-flex items-center md:mb-2 lg:mb-0">Read More
                                 <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M5 12h14"></path>
                                 <path d="M12 5l7 7-7 7"></path>
