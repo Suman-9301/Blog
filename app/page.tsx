@@ -1,12 +1,12 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <>
     <section className="text-gray-600 body-font">
   <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-      <img className="object-cover object-center rounded w-full rounded-sm" alt="hero" src="https://eternitymarketing.com/assets/image-cache/blog/How-to-Write-SEO-Friendly-Blogs-900x600px.40f6548b.jpg"/>
+      <Image className="object-cover object-center w-full rounded-sm" alt="hero" src="https://eternitymarketing.com/assets/image-cache/blog/How-to-Write-SEO-Friendly-Blogs-900x600px.40f6548b.jpg"/>
     </div>
     <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
       <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Welcome to  <span className="bg-white px-1 rounded-lg"><span className="text-fuchsia-600">Blog</span><span className="text-purple-700">It</span></span>
